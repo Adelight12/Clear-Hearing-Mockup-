@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clear Hearing | Hear Clearly Again (Website Redesign Concept)</title>
+<meta name="description" content="Concept redesign for Clear Hearing: discreet, AI-powered hearing aids delivered to your door with a 45-day home trial.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.pg{font-family:'Inter',sans-serif;color:#1d2b30;background:#fbf8f2;line-height:1.6;font-size:17px;overflow:hidden}
+.pg *{box-sizing:border-box}
+.pg h1,.pg h2,.pg h3{font-family:'Fraunces',serif;margin:0;line-height:1.12;color:#0d4f5c}
+.pg p{margin:0}
+.w{max-width:1200px;margin:0 auto;padding:0 28px;position:relative}
+.sec{padding:100px 0}
+.eb{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#c2410c;background:#fde9dd;padding:7px 16px;border-radius:999px;margin-bottom:18px}
+.h2{font-size:44px;margin-bottom:16px;max-width:760px}
+.lead{color:#51636a;max-width:620px;font-size:19px}
+.bar{background:#093a44;color:#e6f1f3;font-size:14px;text-align:center;padding:10px 20px}
+.nav{background:rgba(251,248,242,.94);border-bottom:1px solid #e6dfd0}
+.nav .w{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px;flex-wrap:wrap}
+.logo{font-family:'Fraunces',serif;font-weight:700;font-size:26px;color:#0d4f5c;text-decoration:none}
+.logo b{color:#c2410c}
+.menu{display:flex;gap:32px;font-weight:500;font-size:16px;flex-wrap:wrap}
+.menu a{color:#1d2b30;text-decoration:none;background:linear-gradient(#c2410c,#c2410c) 0 100%/0 2px no-repeat;transition:background-size .3s,color .3s;padding-bottom:4px}
+.menu a:hover{color:#c2410c;background-size:100% 2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 32px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;background:#c2410c;color:#fff;transition:transform .25s,background .25s}
+.btn:hover{background:#9a3309;transform:translateY(-3px)}
+.btn.p{animation:pulse 2.4s infinite}
+.btn.o{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.btn.o:hover{background:#fff;color:#0d4f5c}
+.btn.d{background:transparent;color:#0d4f5c;border:2px solid #0d4f5c}
+.hero{background:#0d4f5c;color:#fff;position:relative}
+.hero .w{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:40px;align-items:center;padding-top:84px;padding-bottom:96px}
+.hero h1{font-size:64px;color:#fff;margin-bottom:24px;animation:up .9s both}
+.hero h1 em{font-style:normal;color:#ffb48c}
+.hero .lead{color:#cfe3e6;margin-bottom:36px;animation:up .9s .15s both}
+.hero .eb{background:rgba(255,255,255,.12);color:#ffcfb3;animation:up .9s both}
+.acts{display:flex;gap:14px;flex-wrap:wrap;animation:up .9s .3s both}
+.pills{display:flex;gap:26px;flex-wrap:wrap;margin-top:40px;font-weight:600;font-size:15px;color:#e6f1f3;animation:up .9s .45s both}
+.pills span{display:flex;gap:9px;align-items:center}
+.pills i{width:10px;height:10px;border-radius:50%;background:#ffb48c;display:inline-block}
+.art{position:relative;animation:up 1s .2s both}
+.ring{transform-origin:260px 210px;animation:ring 3.6s ease-out infinite;fill:none;stroke:#8ec3cc;stroke-width:2}
+.ring.b{animation-delay:1.2s}
+.ring.c{animation-delay:2.4s}
+.fl{animation:flt 5s ease-in-out infinite}
+.fl.b{animation-delay:-2.5s}
+.tick{background:#c2410c;color:#fff;overflow:hidden;white-space:nowrap;padding:16px 0;font-weight:700;letter-spacing:.12em;font-size:14px}
+.tick div{display:inline-block;animation:mq 26s linear infinite}
+.tick span{margin:0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:48px}
+.card{background:#fff;border:1px solid #e6dfd0;border-radius:24px;padding:34px;transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-10px);box-shadow:0 24px 48px rgba(13,79,92,.14)}
+.card h3{font-size:23px;margin-bottom:10px}
+.card p{color:#51636a;font-size:16px}
+.num{width:54px;height:54px;border-radius:16px;background:#e3eef0;color:#0d4f5c;font-family:'Fraunces',serif;font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;transition:.35s}
+.card:hover .num{background:#c2410c;color:#fff;transform:rotate(-8deg)}
+.eq{display:flex;align-items:center;gap:6px;height:90px;margin-top:40px}
+.eq i{width:10px;height:100%;border-radius:6px;background:#0d4f5c;display:block;animation:eq 1.1s ease-in-out infinite;transform-origin:center}
+.eq i:nth-child(2n){animation-delay:-.4s;background:#c2410c}
+.eq i:nth-child(3n){animation-delay:-.8s}
+.eq i:nth-child(5n){animation-delay:-.2s}
+.sand{background:#f1ebe0}
+.quote{font-style:italic;color:#1d2b30;margin-bottom:16px;font-size:17px}
+.tag{font-size:14px;color:#51636a}
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px;margin-top:48px}
+.col{border-radius:28px;padding:40px}
+.col.a{background:#fff;border:1px solid #e6dfd0}
+.col.b{background:#0d4f5c;color:#fff}
+.col h3{font-size:26px;margin-bottom:18px}
+.col.b h3{color:#fff}
+.meter{height:16px;border-radius:999px;background:rgba(120,130,130,.2);margin-bottom:22px;overflow:hidden}
+.meter u{display:block;height:100%;border-radius:999px;text-decoration:none;transform-origin:left;animation:grow 1.6s .3s both}
+.col.a .meter u{width:100%;background:#8a979c}
+.col.b .meter u{width:7%;background:#ffb48c}
+.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(120,130,130,.25);font-size:16px}
+.tot{margin-top:24px;font-family:'Fraunces',serif;font-size:38px;font-weight:700}
+.col.a .tot{color:#51636a}
+.old{text-decoration:line-through;opacity:.65;font-size:22px;margin-right:12px}
+.save{margin-top:10px;font-size:15px;color:#cfe3e6}
+.stars{color:#c2410c;letter-spacing:3px;font-size:20px;margin-bottom:12px}
+.prod{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center;background:#fff;border:1px solid #e6dfd0;border-radius:36px;padding:56px;box-shadow:0 30px 60px rgba(13,79,92,.08)}
+.price{font-family:'Fraunces',serif;font-size:54px;font-weight:700;color:#0d4f5c;margin:16px 0}
+.price s{font-size:26px;color:#51636a;font-weight:600;margin-left:12px}
+.badge{display:inline-block;background:#c2410c;color:#fff;font-weight:700;font-size:13px;letter-spacing:.08em;padding:7px 16px;border-radius:999px}
+details{background:#fff;border:1px solid #e6dfd0;border-radius:18px;padding:24px 28px;margin-bottom:14px;transition:box-shadow .3s}
+details:hover{box-shadow:0 12px 28px rgba(13,79,92,.1)}
+summary{font-weight:700;font-size:18px;color:#0d4f5c;cursor:pointer;min-height:28px}
+details p{margin-top:12px;color:#51636a}
+.cta{background:#0d4f5c;color:#fff;text-align:center;border-radius:36px;padding:72px 32px;position:relative;overflow:hidden}
+.cta h2{color:#fff;margin:0 auto 16px}
+.cta p{color:#cfe3e6;margin-bottom:32px}
+.cta svg{position:absolute;left:50%;top:50%;margin:-200px 0 0 -200px;opacity:.35}
+.cta .z{position:relative}
+.ft{background:#093a44;color:#cfe3e6;padding:64px 0 36px;font-size:15px}
+.ft .w{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px}
+.ft h3{color:#fff;font-size:18px;margin-bottom:14px}
+.ft a{color:#cfe3e6;display:block;text-decoration:none;margin-bottom:8px}
+.ft a:hover{color:#fff}
+.cp{text-align:center;margin-top:44px;color:#8fb3ba;font-size:13px}
+.photo{position:relative;border-radius:36px;overflow:hidden;box-shadow:0 30px 60px rgba(13,79,92,.18)}
+.photo img{width:100%;display:block;object-fit:cover;transition:transform 1.2s}
+.photo:hover img{transform:scale(1.05)}
+.hp{aspect-ratio:5/4;border-radius:36px;overflow:hidden;position:relative;z-index:1;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.hp img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.disc{position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:#ffb48c;animation:flt 6s ease-in-out infinite}
+.chip{position:absolute;z-index:2;left:-26px;bottom:34px;background:#fff;color:#1d2b30;border-radius:20px;padding:16px 22px;box-shadow:0 18px 40px rgba(0,0,0,.25);animation:flt 5s ease-in-out infinite}
+.chip b{display:block;font-family:'Fraunces',serif;font-size:21px;color:#0d4f5c}
+.chip span{font-size:14px;color:#51636a}
+.cap{position:absolute;left:28px;bottom:28px;max-width:360px;background:rgba(255,255,255,.95);border-radius:20px;padding:20px 24px}
+.cap b{display:block;font-family:'Fraunces',serif;font-size:22px;color:#0d4f5c;margin-bottom:4px}
+.cap span{font-size:15px;color:#51636a}
+@keyframes up{
+from{opacity:0;transform:translateY(34px)}
+to{opacity:1;transform:none}
+}
+@keyframes flt{
+0%,100%{transform:translateY(0) rotate(-2deg)}
+50%{transform:translateY(-16px) rotate(2deg)}
+}
+@keyframes ring{
+0%{transform:scale(.3);opacity:.9}
+100%{transform:scale(1.7);opacity:0}
+}
+@keyframes eq{
+0%,100%{transform:scaleY(.2)}
+50%{transform:scaleY(1)}
+}
+@keyframes grow{
+from{transform:scaleX(0)}
+to{transform:scaleX(1)}
+}
+@keyframes mq{
+from{transform:translateX(0)}
+to{transform:translateX(-50%)}
+}
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(194,65,12,.55)}
+70%{box-shadow:0 0 0 18px rgba(194,65,12,0)}
+100%{box-shadow:0 0 0 0 rgba(194,65,12,0)}
+}
+@supports (animation-timeline:view()){
+.rv{animation:up .9s both;animation-timeline:view();animation-range:entry 5% cover 28%}
+.col .meter u{animation:grow 1s both;animation-timeline:view();animation-range:entry 10% cover 40%}
+}
+@media(max-width:700px){
+.hero h1{font-size:42px}
+.h2{font-size:32px}
+.prod{padding:28px}
+}
+@media(prefers-reduced-motion:reduce){
+.pg *{animation:none!important;transition:none!important}
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="pg">
+
+<div class="bar">National Hearing Week: from $700, now $349.99. Free shipping and a 45-day trial at home.</div>
+
+<header class="nav"><div class="w">
+<a class="logo" href="#top">Clear <b>Hearing</b></a>
+<nav class="menu" aria-label="Main">
+<a href="#top">Home</a><a href="#shop">Shop</a><a href="#about">About us</a><a href="#contact">Contact</a><a href="#top">Track your order</a>
+</nav>
+<a class="btn" href="#shop">Shop Now</a>
+</div></header>
+
+<section class="hero" id="top"><div class="w">
+<div>
+<div class="eb">Invisible hearing technology</div>
+<h1>Hear <em>clearly</em> again, without feeling old.</h1>
+<p class="lead">Discreet, AI-powered hearing aids delivered to your door. No clinics, no waiting lists, no $5,000 price tag.</p>
+<div class="acts"><a class="btn p" href="#shop">Try Clear Hearing: 45-day trial</a><a class="btn o" href="#how">See how it works</a></div>
+<div class="pills"><span><i></i>Try at home for 45 days</span><span><i></i>1-year full warranty</span><span><i></i>TGA-included</span></div>
+</div>
+<div class="art">
+<div class="disc" aria-hidden="true"></div>
+<div class="hp"><img src="hero.jpg" alt="Smiling woman with a tiny in-ear hearing aid, barely visible"></div>
+<div class="chip"><b>Barely visible</b><span>Sits inside the ear canal</span></div>
+</div>
+</div></section>
+
+<div class="tick" aria-hidden="true"><div>
+<span>FREE SHIPPING AND 45 DAY TRIAL AT HOME</span><span>•</span><span>FREE SHIPPING AND 45 DAY TRIAL AT HOME</span><span>•</span><span>FREE SHIPPING AND 45 DAY TRIAL AT HOME</span><span>•</span><span>FREE SHIPPING AND 45 DAY TRIAL AT HOME</span><span>•</span><span>FREE SHIPPING AND 45 DAY TRIAL AT HOME</span><span>•</span><span>FREE SHIPPING AND 45 DAY TRIAL AT HOME</span><span>•</span><span>FREE SHIPPING AND 45 DAY TRIAL AT HOME</span><span>•</span><span>FREE SHIPPING AND 45 DAY TRIAL AT HOME</span><span>•</span>
+</div></div>
+
+<section class="sec" id="how"><div class="w rv">
+<div class="eb">Why Clear Hearing</div>
+<h2 class="h2">AI-powered sound that fits you like your favourite glasses.</h2>
+<div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="photo" style="margin-top:44px"><img src="dinner.jpg" alt="Senior couple laughing over dinner in a busy restaurant" style="height:520px"><div class="cap"><b>Follow every conversation</b><span>Even in a busy restaurant, voices stay clear and background noise fades.</span></div></div>
+<div class="grid">
+<div class="card"><div class="num">1</div><h3>Perfect sound in any situation</h3><p>Restaurant conversations, TV watching and phone calls. Each mode optimises for what you're doing.</p></div>
+<div class="card"><div class="num">2</div><h3>Adapts to you automatically</h3><p>Smart AI learns your hearing needs and adjusts in real time. No manual tweaking.</p></div>
+<div class="card"><div class="num">3</div><h3>Crystal clear conversations</h3><p>Reduces background noise and whistling so you hear voices, not distractions.</p></div>
+<div class="card"><div class="num">4</div><h3>Wear all day, charge at night</h3><p>A lightweight design you'll forget you're wearing, with 30+ hours of battery life.</p></div>
+</div>
+</div></section>
+
+<section class="sec sand"><div class="w rv">
+<div class="eb">The problem</div>
+<h2 class="h2">You shouldn't have to choose between...</h2>
+<div class="grid">
+<div class="card"><h3>The HSP won't cover everyone</h3><p class="quote">"I'm a pensioner, but between the referral and the waitlist, it's been months and I still don't have hearing aids."</p><p class="tag">Limited eligibility, months-long waitlists, basic devices only.</p></div>
+<div class="card"><h3>$4,000+ hearing clinics</h3><p class="quote">"Why are they so expensive? Are they made of gold?"</p><p class="tag">High prices, hidden fees, pushy sales.</p></div>
+<div class="card"><h3>Cheap sound amplifiers</h3><p class="quote">"Mine kept whistling in the middle of conversation."</p><p class="tag">Cheap plastic, poor sound, zero support.</p></div>
+</div>
+</div></section>
+
+<section class="sec"><div class="w rv">
+<div class="eb">Our fix</div>
+<h2 class="h2">We were tired of high prices and poor results, so we fixed it.</h2>
+<div class="grid">
+<div class="card"><div class="num">&#10003;</div><h3>No appointments</h3><p>Get help fast, from home.</p></div>
+<div class="card"><div class="num">&#10003;</div><h3>Save $4,500+</h3><p>Same quality, lower price.</p></div>
+<div class="card"><div class="num">&#10003;</div><h3>Invisible design</h3><p>No one will notice.</p></div>
+<div class="card"><div class="num">&#10003;</div><h3>Australian support</h3><p>Always here to help.</p></div>
+</div>
+</div></section>
+
+<section class="sec sand" id="shop"><div class="w rv">
+<div class="eb">Pricing</div>
+<h2 class="h2">Why $349.99 instead of $5,000+?</h2>
+<p class="lead">We cut out the middlemen and pass the savings directly to you.</p>
+<div class="vs">
+<div class="col a"><h3>Hearing clinics</h3>
+<div class="meter"><u></u></div>
+<div class="row"><span>Hearing aid technology</span><b>$450</b></div>
+<div class="row"><span>Premium clinic rent</span><b>$1,150</b></div>
+<div class="row"><span>Sales commissions</span><b>$950</b></div>
+<div class="row"><span>Marketing overhead</span><b>$900</b></div>
+<div class="row"><span>Multiple appointments</span><b>$750</b></div>
+<div class="row"><span>Audiologist fees</span><b>$800</b></div>
+<div class="tot">You pay: $5,000</div></div>
+<div class="col b"><h3>Clear Hearing</h3>
+<div class="meter"><u></u></div>
+<div class="row"><span>Same hearing technology</span><b>$450</b></div>
+<div class="row"><span>Shipped from Australian warehouse</span><b>$8</b></div>
+<div class="row"><span>Australian-based support</span><b>$42</b></div>
+<div class="row"><span>Clinic rent, commissions, marketing</span><b>$0</b></div>
+<div class="tot"><span class="old">$700</span>Today: $349.99</div>
+<p class="save">National Hearing Week, 50% off. Same technology, TGA-included, less hassle.</p></div>
+</div>
+</div></section>
+
+<section class="sec"><div class="w rv">
+<div class="eb">Reviews</div>
+<h2 class="h2">Trusted by thousands across Australia.</h2>
+<p class="lead">Overall rating 4.5 / 5 from 1,384 reviews.</p>
+<div class="grid">
+<div class="card"><div class="stars" aria-label="5 out of 5">★★★★★</div><p class="quote">"Amazing hearing aids, they're so tiny, you don't even see them! Better than my $5k ones."</p><p class="tag">Steve W., verified buyer</p></div>
+<div class="card"><div class="stars" aria-label="5 out of 5">★★★★★</div><p class="quote">"After using Government provided aids on two previous occasions these aids are brilliant. I just put them in and they worked."</p><p class="tag">Bill M., verified buyer</p></div>
+<div class="card"><div class="stars" aria-label="5 out of 5">★★★★★</div><p class="quote">"The hearing aids arrived very quickly. I put them in and I could instantly hear clearly. They are amazing."</p><p class="tag">Deb M., verified buyer</p></div>
+</div>
+</div></section>
+
+<section class="sec sand"><div class="w rv">
+<div class="prod">
+<svg viewBox="0 0 420 340" width="100%" role="img" aria-label="Clear Hearing Comfort hearing aids and charging case">
+<rect width="420" height="340" rx="32" fill="#e3eef0"/>
+<circle class="ring" style="transform-origin:210px 150px" cx="210" cy="150" r="130"/>
+<rect x="80" y="190" width="260" height="100" rx="40" fill="#fff" stroke="#cfdfe2" stroke-width="3"/>
+<g class="fl"><ellipse cx="155" cy="120" rx="38" ry="52" fill="#fff" stroke="#b9d0d5" stroke-width="3"/><ellipse cx="155" cy="140" rx="18" ry="23" fill="#0d4f5c"/></g>
+<g class="fl b"><ellipse cx="265" cy="110" rx="38" ry="52" fill="#fff" stroke="#b9d0d5" stroke-width="3"/><ellipse cx="265" cy="130" rx="18" ry="23" fill="#0d4f5c"/></g>
+</svg>
+<div>
+<span class="badge">SAVE 50%</span>
+<h2 class="h2" style="margin-top:18px">Clear Hearing Comfort Hearing Aids</h2>
+<p class="lead">Invisible hearing technology with 3 tailored listening modes and AI-powered sound processing. 30+ hours of battery life.</p>
+<div class="price">$349.99<s>$500.00</s></div>
+<div class="acts"><a class="btn p" href="#top">Get my hearing back</a></div>
+<p class="tag" style="margin-top:16px">45-day trial at home and 1-year warranty</p>
+</div>
+</div>
+</div></section>
+
+<section class="sec" id="about"><div class="w rv" style="max-width:860px">
+<div class="eb">Questions</div>
+<h2 class="h2">Frequently asked questions</h2>
+<div style="margin-top:36px">
+<details open><summary>How can they be so reasonably priced?</summary><p>You're paying for clinic overhead, staff, middlemen and big-brand marketing. We removed the middlemen: no clinics, no salespeople, just discreet, high-quality hearing aids sent straight to your door.</p></details>
+<details><summary>Will this work for my type of hearing loss?</summary><p>Clear Hearing Comfort is made for mild to moderate hearing loss, whether age-related or caused by noise, work or anything else.</p></details>
+<details><summary>What if it doesn't work for me?</summary><p>Hear better within 45 days or get a refund. Every pair also comes with a 1-year warranty covering technical issues.</p></details>
+<details><summary>Will the hearing aids fit my ears properly?</summary><p>Each order includes 10 soft, medical-grade ear domes in sizes XS to XL, plus a step-by-step video guide. One aid is about the size of a coffee bean and weighs 2 grams.</p></details>
+<details><summary>How fast is delivery?</summary><p>Orders ship from our Australian fulfilment centre in NSW, usually within 24 hours. Most customers receive them within 2 to 4 business days, with full tracking.</p></details>
+</div>
+</div></section>
+
+<section style="padding:0 0 100px"><div class="w rv"><div class="cta">
+<svg viewBox="0 0 400 400" width="400" height="400" aria-hidden="true"><circle class="ring" style="transform-origin:200px 200px" cx="200" cy="200" r="190"/><circle class="ring b" style="transform-origin:200px 200px" cx="200" cy="200" r="190"/></svg>
+<div class="z"><h2 class="h2">Ready to hear clearly again?</h2>
+<p>Start today with a 45-day trial at home. If it isn't right, get a refund.</p>
+<a class="btn p" href="#shop">Get my hearing back</a></div>
+</div></div></section>
+
+<footer class="ft" id="contact"><div class="w">
+<div><div class="logo" style="color:#fff">Clear <b>Hearing</b></div><p style="margin-top:12px">Hearing aids made accessible, sent straight to your door.</p></div>
+<div><h3>Information</h3><a href="#top">Contact us</a><a href="#about">About us</a><a href="#top">Track your order</a><a href="#about">FAQ</a></div>
+<div><h3>Policies</h3><a href="#top">Privacy policy</a><a href="#top">Refund policy</a><a href="#top">Shipping policy</a><a href="#top">Terms &amp; conditions</a></div>
+<div><h3>Contact us</h3><p>support@myclearhearing.com</p><p>(048) 501 2669</p><p style="margin-top:8px">Available 7 days a week.</p></div>
+</div>
+<div class="cp">Design concept mockup. © 2026 Clear Hearing</div>
+</footer>
+
+</div>
+
+</body>
+</html>
